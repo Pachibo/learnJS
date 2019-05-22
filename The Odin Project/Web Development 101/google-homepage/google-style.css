@@ -1,0 +1,13 @@
+.google-image{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search-box {
+    padding: 30px;
+    border: 2px solid gray;
+    display: block;
+    margin: auto;
+    width: 50%;
+}
