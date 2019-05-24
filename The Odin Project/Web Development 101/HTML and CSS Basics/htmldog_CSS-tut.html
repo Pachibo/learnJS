@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!- style can be internal ->
+        <!- can define things like color and background-color ->
+        <style>
+        body {
+            color: black;
+            background-color: white;
+            font-size: 13px;
+        }
+        </style>
+        <!- style can be external ->
+        <link rel="stylesheet" href="htmldog_CSS-tut.css">
+    </head>
+    <body>
+        <h1>
+            Header 1 test
+        </h1>
+        <p>
+            px is for pixels. Means size at 100% <br>
+            em is for font size multiplier. (ie. 3em is three times the font size) <br>
+            pt is for points, the unit typically used in printed media <br>
+            % is for percentage <br>
+            there are also pc (picas), cm, mm, and inches <br>
+            no need to specify units for zero
+        </p>
+        <p>
+            CSS uses RGB colors in the form of 
+            <ul>
+                <li>color name (very limited, ie. red)</li>
+                <li>rgb(int,int,int), where int is 0-255 inclusive</li>
+                <li>rgb(%,%,%)</li>
+                <li>#hexadecimal with six or three digits that also correspond to rgb</li>
+            </ul>
+            Can even define things like hue, saturation, transparency. Google for tnat stuff.
+        </p>
+        <p>
+            can define font-family (ie. Arial and Times New Roman) <br>
+            can import custom fonts as well <br>
+            can manipulate font-size <br>
+            can also bold things with font-weight. Google for all ways to manipulate font. <br>
+            can use text-decoration to underline, overline, etc. <br>
+
+        </p>
+        <p>
+            margin and padding are two of the most used properties for spacing out elements. <br>
+            margin is for space outside something <br>
+            padding is for space inside something <br>
+            These properties are based on the following box model.
+        </p>
+        <div id="boxmodel" style="color: #a06700; margin: 20px 0; overflow: auto; padding: 10px 20px 20px 20px; background-color: #e90;">
+                Margin box
+                <div style="padding: 10px 20px 20px 20px; margin: 10px 20px 20px 20px; background-color: #f4bb55;">
+                    Border box
+                    <div style="padding: 10px 20px 20px 20px; margin: 10px 20px 20px 20px; background-color: #f9ddaa;">
+                        Padding box
+                        <div style="padding: 20px; margin: 10px 20px 20px 20px; background-color: #fff;">
+                            Element box
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <p>
+            There different border-style, such as solid, dotted, ridged, etc. <br>
+            There's also border-width and border-color <br>
+        </p>
+        <p>
+            there are class selectors, which use ".", and ID selectors, which use "#", in CSS. <br>
+            an ID is for only one element, while a class can be used for multiple elements. <br>
+            Can also select specific elements with a specific class. <br>
+            For example, p.good would only be applied to paragraph elements with the class "good"
+        </p>
+        <p>
+            For elements/ID/class that you want to have the same properties, can just separate by commas <br>
+            For example, h1, .class1, #ID1 {properties}
+        </p>
+        <p>
+            properties can also be nested. <br>
+            for example, if you want all #bad to have "background-color: orange" and all h2 with #bad to have "color:gray", you can do this: <br>
+            #bad { background-color: orange } <br>
+            #bad h2 {color:orange} <br>
+        </p>
+        <p>
+            properties can also be applied to pseudoclasses in the format of selector:pseudo_class {prop} <br>
+            For example, a:link and a:visited <br>
+            there are also dynamic pseudo classes such as <br>
+            active: when something is activated (like clicking) <br>
+            hover: when something is passed over by an input (like cursor moving over) <br>
+            focus: when something is selected (such as selecting by keyboard) <br>
+        </p>
+        <p>
+            The first-child pseudo class is literally what it means. <br>
+            It styles the first child, such as the first paragraph of a body <br>
+        </p>
+        <p>
+            There are short-hand ways to designate properties. <br>
+            For example, the margin-top to margin-left can just be <br>
+            margin: top right bottom left (clockwise) <br>
+            it's the same for borders. border: width color style <br>
+            also for font: style weight size height family
+        </p>
+        <p>
+            Background images can be made with <br>
+            background: color image repeat position <br>
+            image is in the form of url(image url) 
+        </p>
+        <p>
+            In CSS more specificity means greater precedence <br>
+            calculating it is a hassle, Google when needed. 
+        </p>
+        <p>
+            There are a few display types: <br>
+            inline: displayed in a line <br>
+            block: each box takes up a line <br>
+            inline-block: a more customizable inline <br>
+            there are also display types for tables. Google them if needed <br>
+            use list-item to display boxes in a list, nested within ul or ol. 
+        </p>
+        <p>
+            use selector::pseudo_element to designate <br>
+            examples are first-line and first-letter <br>
+            can also designate before and after <br>
+            coupled with the content property, which can be: <br>
+            open-quote, close-quote, string in quotes, or image 
+        </p>
+        <p>
+            position property can be applied to a box <br>
+            static: default value, where it's in normal order <br>
+            relative: static, but can designate top, right, bottom, left <br>
+            absolute: can be placed in absolute positions of the page (same 4 positions) <br>
+            fixed: absolute, but with respect to browser window. <br>
+            refer to <a href="https://www.htmldog.com/guides/css/intermediate/layout/">this link</a> for more
+        </p>
+        <!- style can be inline ->
+        <div style="color: aqua">
+        </div>
+    </body>
+</html>
